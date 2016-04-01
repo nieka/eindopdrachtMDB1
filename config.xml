@@ -1,3 +1,4 @@
+<!--todo app icon zetten-->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="nl.avans.mbd1.s2070580" version="1.0.0">
   <name>Pokédex</name>
   <description>Hello World sample application that responds to the deviceready event.</description>
@@ -20,20 +21,15 @@
   <preference name="android-installLocation" value="auto"/>
   <gap:plugin name="org.apache.cordova.geolocation"/>
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
-  <icon src="icon.png"/>
-  <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
-  <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
-  <icon src="www/res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
-  <icon src="www/res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
-  <icon src="www/res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
-  <icon src="www/res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
-  <icon src="www/res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57"/>
+  <icon src="www/res/icon/ic_launcher.png"/>
+  <icon src="www/res/icon/android/mipmap-mdpi/ic_launcher.png" gap:platform="android" gap:qualifier="mdpi"/>
+  <icon src="www/res/icon/android/mipmap-hdpi/ic_launcher.png" gap:platform="android" gap:qualifier="hdpi"/>
+  <icon src="www/res/icon/android/mipmap-xhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xhdpi"/>
+  <icon src="www/res/icon/android/mipmap-xxhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xxhdpi"/>
+  <icon src="www/res/icon/android/mipmap-xxxhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xxxhdpi"/>
+  <icon src="www/res/icon/ios/icon-60.png" gap:platform="ios" width="60" height="60"/>
   <icon src="www/res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72"/>
-  <icon src="www/res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114"/>
   <icon src="www/res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144"/>
-  <icon src="www/res/icon/webos/icon-64.png" gap:platform="webos"/>
-  <icon src="www/res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
-  <icon src="www/res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
   <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
   <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
   <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
