@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+
+        <title>PokoDex</title>
+    </head>
+    <body>
+    <div data-role="page" id="pokomonpageLijst" data-prev="settings">
+       <div data-role="header">
+            <h1>Pokodex</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <div id="pokoLijst">
+                <form class="ui-filterable">
+                    <input id="filterBasic-input" data-type="search" placeholder="Zoek pokemon" >
+                </form>
+                <ul data-role="listview" data-filter="true" data-input="#filterBasic-input" id="pokodexlijst" data-inset="true">
+                </ul>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"  data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="search" class="ui-btn-active">Pokodex</a></li>
+                    <li><a href="inventory.html" data-icon="grid" data-transition="slide" >Invetory</a></li>
+                    <li><a href="about.html" data-icon="info" data-transition="slide" >About</a></li>
+                    <li><a href="settings.html" data-icon="gear" data-transition="slide">Setup</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>
+        <script type="text/javascript" src="js/pokomon.js"></script>
+        <script type="text/javascript" src="js/invetoryController.js"></script>
+        <script type="text/javascript" src="js/settingsController.js"></script>
+        <script type="text/javascript" src="js/indexController.js"></script>
+
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<div data-role="page" id="pokomonInvetoryPage" data-prev="index" data-next="settings">
+    <div data-role="header">
+        <h1>Invetory</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div id="pokoLijst">
+            <form class="ui-filterable">
+                <input id="filterBasic-input" data-type="search" placeholder="Zoek pokemon">
+            </form>
+            <ul data-role="listview" data-filter="true" data-input="#filterBasic-input" id="invLijst" data-inset="true">
+            </ul>
+            <button id="vangPokemon" class="ui-btn ui-corner-all">Zoek wilde pokemon</button>
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="search" data-transition="slide" >Pokodex</a></li>
+                <li><a href="inventory.html" data-icon="grid"  class="ui-btn-active" >Invetory</a></li>
+                <li><a href="about.html" data-icon="info" data-transition="slide" >About</a></li>
+                <li><a href="settings.html" data-icon="gear" data-transition="slide">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+</div>
