@@ -41,7 +41,6 @@ $("#pokomonlijst").on('tap', 'a', function(){
 function geolocationSuccess(position){
     mydb.transaction(function (t) {
         t.executeSql("SELECT * FROM pokomonlocaties", [], function(transaction, results){
-            $("#error").text(results);
             var pokomongevangen = false;
             for(var i=0; i< results.rows.length; i++){
                 var pokoLocatie = results.rows[i];
