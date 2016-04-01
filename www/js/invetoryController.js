@@ -15,7 +15,7 @@ if (window.openDatabase) {
 $(document).on('tap','#vangPokemon', function(){
     console.log("vang pokemon");
     $.mobile.loading( "show", {
-        text: "Pokomon vangen",
+        text: "Pokomon zoeken",
         textVisible: true,
         theme: $.mobile.loader.prototype.options.theme,
         textonly: false,
@@ -39,10 +39,9 @@ $("#pokomonlijst").on('tap', 'a', function(){
 });
 
 function geolocationSuccess(position){
-    console.log(position);
     mydb.transaction(function (t) {
         t.executeSql("SELECT * FROM pokomonlocaties", [], function(transaction, results){
-            console.log(results);
+            $("#error").text(results);
             var pokomongevangen = false;
             for(var i=0; i< results.rows.length; i++){
                 var pokoLocatie = results.rows[i];
@@ -68,7 +67,6 @@ function geolocationSuccess(position){
                         });
                         console.log("pokomon vangen?")
                     });
-
                     break;
                 } else {
                 }
@@ -95,6 +93,6 @@ function geolocationSuccess(position){
 }
 
 function onError(error) {
-    console.log('code: ' + error.code + '\n' +
-        'message: ' + error.message + '\n');
+    $.mobile.loading( "hide" );
+
 }
