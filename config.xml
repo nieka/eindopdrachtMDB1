@@ -1,4 +1,3 @@
-<!--todo app icon zetten-->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="nl.avans.mbd1.s2070580" version="1.0.0">
   <name>Pokédex</name>
   <description>Hello World sample application that responds to the deviceready event.</description>
@@ -22,7 +21,7 @@
   <gap:plugin name="org.apache.cordova.geolocation"/>
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <icon src="www/res/icon/ic_launcher.png"/>
+  <icon src="ic_launcher.png"/>
   <icon src="www/res/icon/android/mipmap-mdpi/ic_launcher.png" gap:platform="android" gap:qualifier="mdpi"/>
   <icon src="www/res/icon/android/mipmap-hdpi/ic_launcher.png" gap:platform="android" gap:qualifier="hdpi"/>
   <icon src="www/res/icon/android/mipmap-xhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xhdpi"/>
