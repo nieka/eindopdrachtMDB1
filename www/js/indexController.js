@@ -35,6 +35,8 @@ var app = {
 };
 
 $( "#pokomonpageLijst" ).on( "pagebeforecreate", function( event, ui ) {
+    /*todo show load dialog*/
+
     pokomonObject.getPokomonsPaged(0,5, true);
     getPokomonInvetory();
 } );
@@ -44,6 +46,15 @@ $( "#pokomonpageLijst" ).on( "pageinit", function( event, ui ) {
         $("#filterBasic-input").val(zoekwaarde);
         window.localStorage.removeItem("zoekveld");
     }
+ /*   if($("#pokodexlijst").size() === 0){
+        $.mobile.loading( "show", {
+            text: "Pokemons ophalen",
+            textVisible: true,
+            theme: $.mobile.loader.prototype.options.theme,
+            textonly: false,
+            html: ""
+        });
+    }*/
 });
 
 $( "#pokomonpageLijst").on( "pagebeforehide", function( event, ui ) {
@@ -109,7 +120,7 @@ $(document).on('swiperight', '.ui-page', function(event){
 });
 
 //Zorgt ervoor dat alle links naar website in de browser van de telefoon geopent worden
-$(document).on('touchstart','a', function(e) {
+$(document).on('touchstart','.internetLink', function(e) {
     e.preventDefault();
     var elem = $(this);
     var url = elem.attr('href');

@@ -62,10 +62,10 @@ function fillPokomonList(start, end){
     if(end <= pokomonlijst.length){
         endLengt = end;
         var page = pokomonlijst.length/20 +1;
-        getPokomonsPaged(page, page + 5,false);
+        getPokomonsPaged(page, page + 3,false);
     } else {
         var page = pokomonlijst.length/20 +1;
-        getPokomonsPaged(page, page + 7,false);
+        getPokomonsPaged(page, page + 5,false);
         endLengt = pokomonlijst.length;
     }
     for(var i= start; i < endLengt; i++){
@@ -82,7 +82,7 @@ function fillPokomonList(start, end){
         lijst += "</a>";
         lijst += "</li>";
     }
-
+   // $.mobile.loading( "hide" );
     $("#pokodexlijst").append(lijst);
 
 }

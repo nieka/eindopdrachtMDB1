@@ -43,7 +43,7 @@ function geolocationSuccess(position){
                 var afstandLon = Math.abs(pokoLocatie.longitude - position.coords.longitude);
                 if(afstandLat >= 0 && afstandLat <= 0.5 && afstandLon >= 0 && afstandLon <= 0.5){
                     pokomongevangen = true;
-                    navigator.vibrate(2000);
+
                     getPokomon(results.rows[i].id, function(data){
                         $.mobile.loading( "hide" );
                         $(document).simpledialog2({
@@ -61,6 +61,7 @@ function geolocationSuccess(position){
                             }
                         });
                     });
+                    navigator.vibrate(1000);
                     break;
                 }
             }
