@@ -35,11 +35,10 @@ var app = {
 };
 
 $( "#pokomonpageLijst" ).on( "pagebeforecreate", function( event, ui ) {
-    console.log("pagebeforecreate");
     pokomonObject.getPokomonsPaged(0,5, true);
+    getPokomonInvetory();
 } );
 $( "#pokomonpageLijst" ).on( "pageinit", function( event, ui ) {
-    console.log("pageinit");
     var zoekwaarde = window.localStorage.getItem("zoekveld");
     if(zoekwaarde){
         $("#filterBasic-input").val(zoekwaarde);
@@ -48,7 +47,6 @@ $( "#pokomonpageLijst" ).on( "pageinit", function( event, ui ) {
 });
 
 $( "#pokomonpageLijst").on( "pagebeforehide", function( event, ui ) {
-    console.log("beforehide");
     var zoekwaarde = $("#filterBasic-input").val();
     if(zoekwaarde){
         window.localStorage.setItem("zoekveld", zoekwaarde);
@@ -57,7 +55,7 @@ $( "#pokomonpageLijst").on( "pagebeforehide", function( event, ui ) {
 //als er gescrolld word voeg er 5 aan de lijst toe.
 $(document).on( 'scrollstart', '#pokoLijst', function(){
     var startnr = $('#pokodexlijst li').length -1;
-    fillPokomonList(startnr , startnr + 5);
+    fillPokomonList(startnr , startnr + 10);
 });
 
 $("#pokoLijst").on('tap', 'a', function(){
@@ -111,7 +109,7 @@ $(document).on('swiperight', '.ui-page', function(event){
 });
 
 //Zorgt ervoor dat alle links naar website in de browser van de telefoon geopent worden
-$(document).on('mousedown','a', function(e) {
+$(document).on('touchstart','a', function(e) {
     e.preventDefault();
     var elem = $(this);
     var url = elem.attr('href');
@@ -119,12 +117,3 @@ $(document).on('mousedown','a', function(e) {
         window.open(url, '_system');
     }
 });
-
-function includeJs(jsFilePath) {
-    var js = document.createElement("script");
-
-    js.type = "text/javascript";
-    js.src = jsFilePath;
-
-    document.body.appendChild(js);
-}

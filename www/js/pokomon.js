@@ -62,10 +62,10 @@ function fillPokomonList(start, end){
     if(end <= pokomonlijst.length){
         endLengt = end;
         var page = pokomonlijst.length/20 +1;
-        getPokomonsPaged(page, page +3,false);
+        getPokomonsPaged(page, page + 5,false);
     } else {
         var page = pokomonlijst.length/20 +1;
-        getPokomonsPaged(page, page +5,false);
+        getPokomonsPaged(page, page + 7,false);
         endLengt = pokomonlijst.length;
     }
     for(var i= start; i < endLengt; i++){
@@ -128,29 +128,38 @@ function vangPokemon(id, naam){
     mydb.transaction(function (t) {
         t.executeSql("INSERT INTO pokomonsGevangen (id, naam) VALUES (?, ?)", [id, naam]);
         t.executeSql('DELETE FROM pokomonlocaties WHERE id = ?', [id]);
-        loadPokomonInvetory()
+        getPokomonInvetory()
     });
 }
-function loadPokomonInvetory(){
-    var lijst = "";
+
+function getPokomonInvetory(){
     mydb.transaction(function (t) {
         t.executeSql("SELECT * FROM pokomonsGevangen", [], function (transaction, results) {
-            for (var i = 0; i < results.rows.length; i++) {
-                var pokomon = results.rows[i];
-                lijst += "<li>";
-                lijst += "<a id='#pokoDetail' rel='" + results.rows[i].id + "'>";
-                if (pokomonafbeeldingen[pokomon.id]) {
-                    lijst += "<img id='pokomon_image' src='" + pokomonafbeeldingen[i] + "'>";
-                } else {
-                    lijst += "<img id='pokomon_image' src='http://pokeapi.co/media/sprites/pokemon/" + pokomon.id + ".png'>";
-                }
-                lijst += "<h2>" + pokomon.naam + "</h2>";
-                lijst += "</a>";
-                lijst += "</li>";
-            }
-            $("#invLijst").empty().append(lijst);
+            window.localStorage.setItem("inv",JSON.stringify(results.rows));
+            loadPokomonInvetory();
         });
     });
+}
+
+function loadPokomonInvetory(){
+    var lijst = "";
+    var inv = JSON.parse(window.localStorage.getItem("inv"));
+    var i=0;
+    while (inv[i]) {
+        var pokemon = inv[i];
+        lijst += "<li>";
+        lijst += "<a id='#pokoDetail' rel='" + pokemon.id + "'>";
+        if (pokomonafbeeldingen[pokemon.id]) {
+            lijst += "<img id='pokomon_image' src='" + pokomonafbeeldingen[i] + "'>";
+        } else {
+            lijst += "<img id='pokomon_image' src='http://pokeapi.co/media/sprites/pokemon/" + pokemon.id + ".png'>";
+        }
+        lijst += "<h2>" + pokemon.naam + "</h2>";
+        lijst += "</a>";
+        lijst += "</li>";
+        i++;
+    }
+    $("#invLijst").empty().append(lijst);
 }
 
 //voegt 10 pokomons toe die gevangen kunnen worden

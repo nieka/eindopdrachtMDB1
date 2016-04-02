@@ -24,7 +24,6 @@ $(document).on('tap','#vangPokemon', function(){
     navigator.geolocation.getCurrentPosition(geolocationSuccess,onError);
 });
 $(document).on( "pagebeforecreate",'#pokomonInvetoryPage', function( event, ui ) {
-    console.log("pagebeforecreate inv");
     loadPokomonInvetory();
     $("#invLijst").on('tap', 'a', function(){
         console.log(this.rel);
@@ -32,11 +31,6 @@ $(document).on( "pagebeforecreate",'#pokomonInvetoryPage', function( event, ui )
         $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
     });
 } );
-$("#pokomonlijst").on('tap', 'a', function(){
-    console.log(this.rel + "inv detail");
-    getPokomonDetails((this.rel +1));
-    $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
-});
 
 function geolocationSuccess(position){
     mydb.transaction(function (t) {
@@ -47,7 +41,7 @@ function geolocationSuccess(position){
                 //0.000001
                 var afstandLat = Math.abs(pokoLocatie.latitude - position.coords.latitude);
                 var afstandLon = Math.abs(pokoLocatie.longitude - position.coords.longitude);
-                if(afstandLat >= 0 && afstandLat <= 0.00002 && afstandLon >= 0 && afstandLon <= 0.00002){
+                if(afstandLat >= 0 && afstandLat <= 0.5 && afstandLon >= 0 && afstandLon <= 0.5){
                     pokomongevangen = true;
                     navigator.vibrate(2000);
                     getPokomon(results.rows[i].id, function(data){
@@ -66,7 +60,6 @@ function geolocationSuccess(position){
                                 }
                             }
                         });
-                        console.log("pokomon vangen?")
                     });
                     break;
                 }
