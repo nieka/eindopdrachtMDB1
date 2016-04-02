@@ -159,7 +159,7 @@ function addDummyData(){
         t.executeSql("SELECT * FROM pokomonlocaties", [], function(transaction, results){
             if(results.rows.length === 0){
                 mydb.transaction(function (t) {
-                    t.executeSql("INSERT INTO pokomonlocaties (id, latitude, longitude) VALUES (?, ?,?)",[10,51.697816,5.303675]);
+                    t.executeSql("INSERT INTO pokomonlocaties (id, latitude, longitude) VALUES (?, ?,?)",[10,51.803347,5.235370]);
                     t.executeSql("INSERT INTO pokomonlocaties (id, latitude, longitude) VALUES (?, ?,?)",[15,51.689980,5.295904]);
                     t.executeSql("INSERT INTO pokomonlocaties (id, latitude, longitude) VALUES (?, ?,?)",[20,51.683874,5.292578]);
                     t.executeSql("INSERT INTO pokomonlocaties (id, latitude, longitude) VALUES (?, ?,?)",[25,51.688264,5.279875]);

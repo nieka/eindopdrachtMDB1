@@ -43,11 +43,13 @@ function geolocationSuccess(position){
         t.executeSql("SELECT * FROM pokomonlocaties", [], function(transaction, results){
             var pokomongevangen = false;
             for(var i=0; i< results.rows.length; i++){
+                //todo zorgen dat de telefoon trilt als je een pokomon vangt
                 var pokoLocatie = results.rows[i];
                 var afstandLat = Math.abs(pokoLocatie.latitude - position.coords.latitude);
                 var afstandLon = Math.abs(pokoLocatie.longitude - position.coords.longitude);
                 if(afstandLat >= 0 && afstandLat <= 0.000001 && afstandLon >= 0 && afstandLon <= 0.000001){
                     pokomongevangen = true;
+                    navigator.vibrate(2000);
                     getPokomon(results.rows[i].id, function(data){
                         $.mobile.loading( "hide" );
                         $(document).simpledialog2({
@@ -67,7 +69,6 @@ function geolocationSuccess(position){
                         console.log("pokomon vangen?")
                     });
                     break;
-                } else {
                 }
             }
             if(!pokomongevangen){
