@@ -72,7 +72,7 @@ $(document).on( 'scrollstart', '#pokoLijst', function(){
 $("#pokoLijst").on('tap', 'a', function(){
     console.log(this.rel);
     getPokomonDetails(parseInt(this.rel));
-    $.mobile.changePage( "../pokemonDetail.html", { transition: "slide"} );
+    $.mobile.changePage( "pokemonDetail.html", { transition: "slide"} );
 });
 
 $(document).on('swipeleft', '.ui-page', function(event){
@@ -80,16 +80,16 @@ $(document).on('swipeleft', '.ui-page', function(event){
     {
         switch(this.id){
             case "pokomonpageLijst" :
-                $.mobile.changePage("../www/inventory.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("inventory.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "pokomonInvetoryPage" :
-                $.mobile.changePage("../www/about.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("about.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "about" :
-                $.mobile.changePage("../www/settings.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("settings.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "settings" :
-                $.mobile.changePage("../www/index.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("index.html", {transition: "slide", reverse: true}, true, true);
                 break;
         }
         event.handled = true;
@@ -102,16 +102,16 @@ $(document).on('swiperight', '.ui-page', function(event){
     {
         switch(this.id){
             case "pokomonpageLijst" :
-                $.mobile.changePage("../www/settings.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("settings.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "pokomonInvetoryPage" :
-                $.mobile.changePage("../www/index.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("index.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "about" :
-                $.mobile.changePage("../www/inventory.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("inventory.html", {transition: "slide", reverse: true}, true, true);
                 break;
             case "settings" :
-                $.mobile.changePage("../www/about.html", {transition: "slide", reverse: true}, true, true);
+                $.mobile.changePage("about.html", {transition: "slide", reverse: true}, true, true);
                 break;
         }
         event.handled = true;

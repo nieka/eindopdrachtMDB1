@@ -27,7 +27,7 @@ $(document).on( "pagebeforecreate",'#pokomonInvetoryPage', function( event, ui )
     loadPokomonInvetory();
     $("#invLijst").on('tap', 'a', function(){
         getPokomonDetails((this.rel));
-        $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
+        $.mobile.changePage( "pokemonDetail.html", { transition: "slide"} );
     });
 });
 
