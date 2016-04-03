@@ -70,7 +70,7 @@ function fillPokomonList(start, end){
     }
     for(var i= start; i < endLengt; i++){
         lijst += "<li>";
-        lijst += "<a id='#pokoDetail' rel='" + i + "'>";
+        lijst += "<a id='#pokoDetail' rel='" + (i +1) + "'>";
         if(pokomonafbeeldingen[i]){
             console.log("sprite loaded");
             lijst += "<img id='pokomon_image' src='" + pokomonafbeeldingen[i] + "'>";
@@ -82,7 +82,7 @@ function fillPokomonList(start, end){
         lijst += "</a>";
         lijst += "</li>";
     }
-   // $.mobile.loading( "hide" );
+    $.mobile.loading( "hide" );
     $("#pokodexlijst").append(lijst);
 
 }

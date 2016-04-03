@@ -35,8 +35,6 @@ var app = {
 };
 
 $( "#pokomonpageLijst" ).on( "pagebeforecreate", function( event, ui ) {
-    /*todo show load dialog*/
-
     pokomonObject.getPokomonsPaged(0,5, true);
     getPokomonInvetory();
 } );
@@ -44,9 +42,9 @@ $( "#pokomonpageLijst" ).on( "pageinit", function( event, ui ) {
     var zoekwaarde = window.localStorage.getItem("zoekveld");
     if(zoekwaarde){
         $("#filterBasic-input").val(zoekwaarde);
-        window.localStorage.removeItem("zoekveld");
+        $("#pokodexlijst").filterable("refresh");
     }
- /*   if($("#pokodexlijst").size() === 0){
+    if($("#pokodexlijst").size() === 1){
         $.mobile.loading( "show", {
             text: "Pokemons ophalen",
             textVisible: true,
@@ -54,13 +52,15 @@ $( "#pokomonpageLijst" ).on( "pageinit", function( event, ui ) {
             textonly: false,
             html: ""
         });
-    }*/
+    }
 });
 
 $( "#pokomonpageLijst").on( "pagebeforehide", function( event, ui ) {
     var zoekwaarde = $("#filterBasic-input").val();
     if(zoekwaarde){
         window.localStorage.setItem("zoekveld", zoekwaarde);
+    } else{
+        window.localStorage.removeItem("zoekveld");
     }
 } );
 //als er gescrolld word voeg er 5 aan de lijst toe.
@@ -71,7 +71,7 @@ $(document).on( 'scrollstart', '#pokoLijst', function(){
 
 $("#pokoLijst").on('tap', 'a', function(){
     console.log(this.rel);
-    getPokomonDetails((this.rel +1));
+    getPokomonDetails(parseInt(this.rel));
     $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
 });
 

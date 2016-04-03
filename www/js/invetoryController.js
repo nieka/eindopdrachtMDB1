@@ -26,10 +26,26 @@ $(document).on('tap','#vangPokemon', function(){
 $(document).on( "pagebeforecreate",'#pokomonInvetoryPage', function( event, ui ) {
     loadPokomonInvetory();
     $("#invLijst").on('tap', 'a', function(){
-        console.log(this.rel);
         getPokomonDetails((this.rel));
         $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
     });
+});
+
+$( document ).on( "pageinit", "#pokomonInvetoryPage", function( event, ui ) {
+    var zoekwaarde = window.localStorage.getItem("zoekveldInv");
+    if(zoekwaarde){
+        $("#filterBasic-input-inv").val(zoekwaarde);
+        $("#invLijst").filterable("refresh");
+    }
+});
+
+$( document).on( "pagebeforehide", "#pokomonInvetoryPage", function( event, ui ) {
+    var zoekwaarde = $("#filterBasic-input-inv").val();
+    if(zoekwaarde){
+        window.localStorage.setItem("zoekveldInv", zoekwaarde);
+    } else{
+        window.localStorage.removeItem("zoekveldInv");
+    }
 } );
 
 function geolocationSuccess(position){
