@@ -72,7 +72,7 @@ $(document).on( 'scrollstart', '#pokoLijst', function(){
 $("#pokoLijst").on('tap', 'a', function(){
     console.log(this.rel);
     getPokomonDetails(parseInt(this.rel));
-    $.mobile.changePage( "../www/pokemonDetail.html", { transition: "slide"} );
+    $.mobile.changePage( "../pokemonDetail.html", { transition: "slide"} );
 });
 
 $(document).on('swipeleft', '.ui-page', function(event){
