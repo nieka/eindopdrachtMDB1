@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07cd25c-58a7-482a-8470-dc87d1c65bcc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/indexController.js" afterPath="$PROJECT_DIR$/www/js/indexController.js" />
     </list>
     <ignored path="eindopdrachtMDB1.iws" />
@@ -24,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13317192">
+            <state vertical-scroll-proportion="-3.548387">
               <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
               <folding />
             </state>
@@ -54,14 +53,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indexController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/indexController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.15402567">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <element signature="e#4040#4861#0" expanded="false" />
+                <element signature="e#4252#5073#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/invetoryController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+              <caret line="47" column="5" selection-start-line="42" selection-start-column="3" selection-end-line="47" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -302,7 +301,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2725832" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,7 +406,7 @@
           <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#4040#4861#0" expanded="false" />
+            <element signature="e#4252#5073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -467,7 +466,7 @@
           <caret line="78" column="53" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#4040#4861#0" expanded="false" />
+            <element signature="e#4252#5073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -519,7 +518,7 @@
           <caret line="60" column="67" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="67" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#4040#4861#0" expanded="false" />
+            <element signature="e#4252#5073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -568,7 +567,7 @@
           <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#4040#4861#0" expanded="false" />
+            <element signature="e#4252#5073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,10 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/invetoryController.js">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -741,22 +740,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/indexController.js">
+    <entry file="file://$PROJECT_DIR$/www/js/invetoryController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#4040#4861#0" expanded="false" />
-          </folding>
+          <caret line="47" column="5" selection-start-line="42" selection-start-column="3" selection-end-line="47" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/js/indexController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13317192">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding />
+        <state vertical-scroll-proportion="0.15402567">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#4252#5073#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

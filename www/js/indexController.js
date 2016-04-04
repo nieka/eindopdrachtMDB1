@@ -63,7 +63,7 @@ $( "#pokomonpageLijst").on( "pagebeforehide", function( event, ui ) {
         window.localStorage.removeItem("zoekveld");
     }
 } );
-
+/*
 $( window ).unload(function() {
     var zoekwaarde = $("#filterBasic-input").val();
     if(zoekwaarde){
@@ -71,7 +71,7 @@ $( window ).unload(function() {
     } else{
         window.localStorage.removeItem("zoekveld");
     }
-});
+});*/
 
 document.addEventListener("pause", onPause, false);
 
@@ -83,7 +83,12 @@ function onPause() {
     } else{
         window.localStorage.removeItem("zoekveld");
     }
-
+    zoekwaarde = $("#filterBasic-input-inv").val();
+    if(zoekwaarde){
+        window.localStorage.setItem("zoekveldInv", zoekwaarde);
+    } else{
+        window.localStorage.removeItem("zoekveldInv");
+    }
 }
 
 //als er gescrolld word voeg er 5 aan de lijst toe.
