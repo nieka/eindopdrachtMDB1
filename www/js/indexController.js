@@ -73,6 +73,19 @@ $( window ).unload(function() {
     }
 });
 
+document.addEventListener("pause", onPause, false);
+
+function onPause() {
+    // Handle the pause event
+    var zoekwaarde = $("#filterBasic-input").val();
+    if(zoekwaarde){
+        window.localStorage.setItem("zoekveld", zoekwaarde);
+    } else{
+        window.localStorage.removeItem("zoekveld");
+    }
+
+}
+
 //als er gescrolld word voeg er 5 aan de lijst toe.
 $(document).on( 'scrollstart', '#pokoLijst', function(){
     var startnr = $('#pokodexlijst li').length -1;
